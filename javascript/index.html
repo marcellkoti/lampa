@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Elso js oldal</h1>
+    <p>
+        Tartalom az oldalon
+    </p>
+    <button class="btn-success"
+    onclick='document.getElementById("kiiras").innerHTML = "Hello JavaScript!"'>
+    Meg kell nyomni</button>
+    <button class="btn-danger" onclick="myFunction()">Ne nyomd meg!</button>
+    <p id="kiiras"></p>
+    <h1>Űrlap készítése</h1>
+    <form action="">
+        Név:
+        <input type="text" placeholder="Ide írd a neved" name="nev" required >
+        <br>
+        Jelszó: <input type="password" name="jelsz" required> 
+        <br>
+        <input type="radio" id="" name="gender" value="fiu" checked>fiú
+        <br>
+        <input type="radio" id="" name="gender" value="lany">lány
+        <br>
+        <input type="radio" id="" name="gender" value="csiga">csiga
+        <br>
+        <input type="checkbox" name="cb" value="1" checked> Egy
+        <br>
+        <input type="checkbox" name="cb" value="2"> Kettő
+        <br>
+        <input type="checkbox" name="cb" value="3"> Három
+        <br>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+
+        <input type="button" value="mehet" onclick="beolvas()"> <input type="reset">
+    </form>
+    <p id="eredmeny"></p>    
+    
+    <script>
+        function myFunction() {
+          alert("Tilos volt megnyomni a gombot!");
+        }
+        function beolvas() {
+            var x = document.getElementsByName("nev")[0].value;
+            var y = document.getElementsByName("jelsz")[0].value;
+
+
+            document.getElementById("eredmeny").innerHTML = "Név: " + x + "<br>";
+            document.getElementById("eredmeny").innerHTML += "Jelszó: " + y + "<br>";
+        }
+
+    </script>
+</body>
+</html>

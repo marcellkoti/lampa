@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="lampa.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lámpa kapcsoló - js DOM segítségével</h1>
+    <div class="main">
+        <h2>kapcsolós megoldás</h2>
+        <center>
+            <p>
+                <img id="lampa" src="pic_bulboff.gif">
+            </p>
+            <p>
+                <button id="fel" type="button" class="btn btn-success" onclick="bekapcsol()">Felkapcsol</button>
+                <button id="le" type="button" class="btn btn-danger" onclick="kikapcsol()" >Lekapcsol</button>
+                </p>
+        </center>
+        
+    </div>
+
+    <div class="main">
+        <h2>kép kattintós megoldás</h2>
+        <center>
+            <p>
+                <img id="lampa2" src="pic_bulboff.gif" onclick="kapcsolo()">
+            </p>            
+        </center>        
+    </div>
+
+    <div class="main">
+        <h2>Egérmutatós megoldás</h2>
+        <center>
+            <p>
+                <img id="lampa3" src="pic_bulboff.gif" onclick="eger()">
+            </p>            
+        </center>        
+    </div>
+    
+
+
+    <script src="lampa.js"></script>
+</body>
+</html>
